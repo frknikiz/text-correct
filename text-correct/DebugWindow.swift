@@ -7,11 +7,18 @@
 
 import SwiftUI
 
+enum DebugServiceType: String, CaseIterable {
+    case correction = "Metni Düzelt"
+    case translateToEnglish = "TR → EN"
+    case translateToTurkish = "EN → TR"
+}
+
 struct DebugWindow: View {
     @StateObject private var logManager = LogManager.shared
     @State private var filterLevel: LogLevel?
     @State private var searchText = ""
     @State private var autoscroll: Bool = true
+    @State private var selectedServiceType: DebugServiceType = .correction
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -97,6 +104,15 @@ struct DebugWindow: View {
                 Toggle("Auto-scroll", isOn: $autoscroll)
                     .toggleStyle(.checkbox)
 
+                // Service type picker
+                Picker("Service", selection: $selectedServiceType) {
+                    ForEach(DebugServiceType.allCases, id: \.self) { type in
+                        Text(type.rawValue).tag(type)
+                    }
+                }
+                .pickerStyle(.menu)
+                .frame(width: 120)
+
                 Spacer()
 
                 // Test Service button
@@ -144,7 +160,7 @@ struct DebugWindow: View {
 
             // Footer
             HStack {
-                Text("Service: 🔧 DEV Türkçe Fix | Select text → Services → 🔧 DEV Türkçe Fix")
+                Text("Services: ✏️ Düzelt | 🇬🇧 TR→EN | 🇹🇷 EN→TR")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
 
@@ -159,12 +175,12 @@ struct DebugWindow: View {
 
     private func testServiceMethod() {
         logManager.info("========================================")
-        logManager.info("🧪 MANUAL TEST: Calling service method...")
+        logManager.info("🧪 MANUAL TEST: Calling \(selectedServiceType.rawValue)...")
         logManager.info("========================================")
 
         // Get the app delegate using global reference
         if let appDelegate = appDelegateShared {
-            let testText = "Test Mesajı"
+            let testText = selectedServiceType == .translateToTurkish ? "Test Message" : "Test Mesajı"
             logManager.info("Test text: '\(testText)'")
 
             // Create a test pasteboard
@@ -177,8 +193,15 @@ struct DebugWindow: View {
             var error: NSString? = nil
             let errorPtr = AutoreleasingUnsafeMutablePointer<NSString?>(&error)
 
-            // Call the service method
-            appDelegate.serviceCorrectText(pboard, userData: nil, error: errorPtr)
+            // Call the appropriate service method
+            switch selectedServiceType {
+            case .correction:
+                appDelegate.serviceCorrectText(pboard, userData: nil, error: errorPtr)
+            case .translateToEnglish:
+                appDelegate.serviceTranslateToEnglish(pboard, userData: nil, error: errorPtr)
+            case .translateToTurkish:
+                appDelegate.serviceTranslateToTurkish(pboard, userData: nil, error: errorPtr)
+            }
 
             if let error = error {
                 logManager.error("Service returned error: \(error)")

@@ -32,17 +32,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     }
 
     // Service method - MUST be in the app delegate for macOS Services to find it
-    @objc func serviceCorrectText(_ pboard: NSPasteboard, userData: String?, error: AutoreleasingUnsafeMutablePointer<NSString?>) {
+    @objc func serviceCorrectText(_ pboard: NSPasteboard, userData: String?, error errorPtr: AutoreleasingUnsafeMutablePointer<NSString?>) {
+        handleService(pboard, serviceType: .correction, processingMessage: "Metin düzeltiliyor...", successNotificationTitle: "Metin Düzeltildi", error: errorPtr)
+    }
+
+    @objc func serviceTranslateToEnglish(_ pboard: NSPasteboard, userData: String?, error errorPtr: AutoreleasingUnsafeMutablePointer<NSString?>) {
+        handleService(pboard, serviceType: .translateToEnglish, processingMessage: "Metin İngilizce'ye çevriliyor...", successNotificationTitle: "İngilizce'ye Çevrildi", error: errorPtr)
+    }
+
+    @objc func serviceTranslateToTurkish(_ pboard: NSPasteboard, userData: String?, error errorPtr: AutoreleasingUnsafeMutablePointer<NSString?>) {
+        handleService(pboard, serviceType: .translateToTurkish, processingMessage: "Metin Türkçe'ye çevriliyor...", successNotificationTitle: "Türkçe'ye Çevrildi", error: errorPtr)
+    }
+
+    private func handleService(
+        _ pboard: NSPasteboard,
+        serviceType: ServiceType,
+        processingMessage: String,
+        successNotificationTitle: String,
+        error errorPtr: AutoreleasingUnsafeMutablePointer<NSString?>
+    ) {
         // VISUAL INDICATOR: Bounce Dock icon
         NSApp.requestUserAttention(.criticalRequest)
 
-        logger.info("Service called: serviceCorrectText")
+        logger.info("Service called: \(serviceType)")
+        LogManager.shared.incrementServiceCallCount()
 
         // Check if API is configured
         let config = APIConfig.shared
         guard config.isConfigured else {
             logger.error("OpenAI API not configured")
-            error.pointee = "OpenAI API yapılandırılmadı. Ayarlar'dan yapılandırın." as NSString
+            errorPtr.pointee = "OpenAI API yapılandırılmadı. Ayarlar'dan yapılandırın." as NSString
             showConfigurationRequiredNotification()
             return
         }
@@ -59,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
         guard let text = inputString else {
             logger.error("No text found in pasteboard")
-            error.pointee = "Metin bulunamadı" as NSString
+            errorPtr.pointee = "Metin bulunamadı" as NSString
             return
         }
 
@@ -67,20 +86,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         logger.info("Text length: \(text.count) characters")
 
         // Show "processing" indicator
-        showProcessingNotification()
+        showProcessingNotification(message: processingMessage)
 
         // Use semaphore to wait for async API call
         let semaphore = DispatchSemaphore(value: 0)
-        var correctedText: String?
+        var resultText: String?
         var apiError: Error?
 
-        // Correct text using OpenAI API asynchronously
+        // Process text using OpenAI API asynchronously
         Task {
             do {
                 let service = OpenAIService()
-                let result = try await service.correctText(text)
-                correctedText = result
-                logger.info("API call successful, got corrected text")
+                let result = try await service.processText(text, serviceType: serviceType)
+                resultText = result
+                logger.info("API call successful, got result text")
             } catch let err {
                 logger.error("API call failed: \(err.localizedDescription)")
                 apiError = err
@@ -105,7 +124,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
         if timedOut {
             logger.error("API call timed out after 60 seconds")
-            error.pointee = "İstek zaman aşımına uğradı. Lütfen tekrar deneyin." as NSString
+            errorPtr.pointee = "İstek zaman aşımına uğradı. Lütfen tekrar deneyin." as NSString
             showErrorNotification(error: "İstek zaman aşımı")
             return
         }
@@ -113,20 +132,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         // Check for errors
         if let err = apiError {
             let errorMsg = (err as? OpenAIError)?.errorDescription ?? err.localizedDescription
-            logger.error("Failed to correct text: \(errorMsg)")
-            error.pointee = errorMsg as NSString
+            logger.error("Failed to process text: \(errorMsg)")
+            errorPtr.pointee = errorMsg as NSString
             showErrorNotification(error: errorMsg)
             return
         }
 
-        guard let finalText = correctedText else {
-            logger.error("No corrected text returned")
-            error.pointee = "Düzeltilen metin alınamadı" as NSString
-            showErrorNotification(error: "Metin düzeltilemedi")
+        guard let finalText = resultText else {
+            logger.error("No result text returned")
+            errorPtr.pointee = "Sonuç alınamadı" as NSString
+            showErrorNotification(error: "İşlem başarısız")
             return
         }
 
-        logger.info("Corrected text: '\(finalText)'")
+        logger.info("Result text: '\(finalText)'")
 
         // IMPORTANT: Clear the pasteboard before writing back
         pboard.clearContents()
@@ -156,50 +175,51 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             NSPasteboard.general.setString(finalText, forType: .string)
         } else {
             logger.error("Failed to write to pasteboard")
-            error.pointee = "Düzeltilen metin yazılamadı" as NSString
+            errorPtr.pointee = "Düzeltilen metin yazılamadı" as NSString
             showErrorNotification(error: "Yazma hatası")
             return
         }
 
         // Show notification
-        showNotification(text: text, correctedText: finalText)
+        showNotification(title: successNotificationTitle, originalText: text, resultText: finalText)
     }
 
-    private func showNotification(text: String, correctedText: String) {
-        logger.info("Showing notification")
+    private func showNotification(title: String, originalText: String, resultText: String) {
+        logger.info("Showing notification: \(title)")
         let notification = NSUserNotification()
-        notification.title = "Metin Düzeltildi"
-        notification.informativeText = "\"\(text.prefix(50))...\" → \"\(correctedText.prefix(50))...\""
+        notification.title = title
+        notification.informativeText = "\"\(originalText.prefix(50))...\" → \"\(resultText.prefix(50))...\""
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.deliver(notification)
         logger.info("Notification delivered")
     }
 
-    private func showProcessingNotification() {
-        logger.info("Showing processing notification")
-        let notification = NSUserNotification()
-        notification.title = "Text Correct"
-        notification.informativeText = "Metin düzeltiliyor..."
-        NSUserNotificationCenter.default.deliver(notification)
-        logger.info("Processing notification delivered")
+    private func showProcessingNotification(message: String) {
+        showNotification(title: "Text Correct", message: message, playSound: false)
     }
 
     private func showConfigurationRequiredNotification() {
-        logger.info("Showing configuration required notification")
-        let notification = NSUserNotification()
-        notification.title = "Text Correct - Yapılandırma Gerekli"
-        notification.informativeText = "OpenAI API anahtarı gerekli. Ayarlar'dan yapılandırın."
-        notification.soundName = NSUserNotificationDefaultSoundName
-        NSUserNotificationCenter.default.deliver(notification)
+        showNotification(
+            title: "Text Correct - Yapılandırma Gerekli",
+            message: "OpenAI API anahtarı gerekli. Ayarlar'dan yapılandırın.",
+            playSound: true
+        )
     }
 
     private func showErrorNotification(error: String) {
-        logger.info("Showing error notification")
+        showNotification(title: "Text Correct - Hata", message: error, playSound: true)
+    }
+
+    private func showNotification(title: String, message: String, playSound: Bool) {
+        logger.info("Showing notification: \(title)")
         let notification = NSUserNotification()
-        notification.title = "Text Correct - Hata"
-        notification.informativeText = error
-        notification.soundName = NSUserNotificationDefaultSoundName
+        notification.title = title
+        notification.informativeText = message
+        if playSound {
+            notification.soundName = NSUserNotificationDefaultSoundName
+        }
         NSUserNotificationCenter.default.deliver(notification)
+        logger.info("Notification delivered")
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {

@@ -37,9 +37,20 @@ struct ContentView: View {
                 Text("Kullanım")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                Text("Herhangi bir metni seçin ve sağ tıklayın → Services → Metni Düzelt")
-                    .font(.caption)
-                    .foregroundStyle(.primary)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Herhangi bir metni seçin ve sağ tıklayın → Services")
+                        .font(.caption)
+                        .foregroundStyle(.primary)
+                    Text("  ✏️ Metni Düzelt - Türkçe metin düzeltme")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                    Text("  🇬🇧 İngilizce'ye Çevir - TR→EN çeviri")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                    Text("  🇹🇷 Türkçe'ye Çevir - EN→TR çeviri")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Spacer()

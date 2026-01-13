@@ -137,19 +137,32 @@ struct OnboardingView: View {
                 .font(.title)
                 .fontWeight(.bold)
 
-            Text("Metin düzeltme işlemi için sistem entegrasyonlu hizmet.")
+            Text("Metin düzeltme ve çeviri için sistem entegrasyonlu hizmet.")
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
 
             VStack(alignment: .leading, spacing: 12) {
                 FeatureRow(icon: "doc.text", text: "Herhangi bir uygulamada metin seçin")
-                FeatureRow(icon: "arrow.turn.down.right", text: "Sağ tıklayın → Services → Metni Düzelt")
-                FeatureRow(icon: "checkmark.circle", text: "Metin otomatik olarak düzeltilir")
+                FeatureRow(icon: "arrow.turn.down.right", text: "Sağ tıklayın → Services")
+                FeatureRow(icon: "checkmark.circle", text: "Metin düzeltilir veya çevrilir")
             }
             .padding()
             .background(Color(nsColor: .controlBackgroundColor))
             .cornerRadius(8)
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Mevcut Hizmetler:")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                Text("✏️ Metni Düzelt - Türkçe metin düzeltme")
+                    .font(.caption2)
+                Text("🇬🇧 İngilizce'ye Çevir - Türkçeden İngilizceye")
+                    .font(.caption2)
+                Text("🇹🇷 Türkçe'ye Çevir - İngilizceden Türkçeye")
+                    .font(.caption2)
+            }
+            .foregroundStyle(.secondary)
         }
     }
 
@@ -171,7 +184,16 @@ struct OnboardingView: View {
 
                     StepRow(number: "1", text: "System Settings (Ayarlar) açın")
                     StepRow(number: "2", text: "Keyboard → Keyboard Shortcuts → Services")
-                    StepRow(number: "3", text: "Text kısmında 'Metni Düzelt' seçeneğini işaretleyin")
+                    StepRow(number: "3", text: "Text kısmında tüm hizmetleri işaretleyin:")
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("  • Metni Düzelt")
+                            .font(.caption2)
+                        Text("  • İngilizce'ye Çevir")
+                            .font(.caption2)
+                        Text("  • Türkçe'ye Çevir")
+                            .font(.caption2)
+                    }
+                    .padding(.leading, 16)
                     StepRow(number: "4", text: "Aşağıdaki 'Etkinleştirdim' butonuna tıklayın")
 
                     Button("System Settings'i Aç") {
@@ -306,8 +328,8 @@ struct OnboardingView: View {
 
             VStack(alignment: .leading, spacing: 12) {
                 StatusRow(icon: "menubar.rectangle", text: "Menü çubuğunda '✓ Text' simgesi görünür")
-                StatusRow(icon: "text.cursor", text: "Services menüsünde 'Metni Düzelt' seçeneği aktif")
-                StatusRow(icon: "doc.on.doc", text: "Herhangi bir uygulamada metin seçip düzeltebilirsiniz")
+                StatusRow(icon: "text.cursor", text: "Services menüsünde 3 hizmet aktif")
+                StatusRow(icon: "doc.on.doc", text: "Metin düzeltebilir veya çevirebilirsiniz")
             }
             .padding()
             .background(Color(nsColor: .controlBackgroundColor))

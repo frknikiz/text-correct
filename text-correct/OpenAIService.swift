@@ -26,8 +26,13 @@ struct OpenAIResponse: Codable {
     }
 }
 
-struct CorrectionResponse: Codable {
-    let corrected_text: String
+struct ServiceResponse: Codable {
+    let result: String?
+    let corrected_text: String?  // Backward compatibility
+
+    var value: String {
+        return result ?? corrected_text ?? ""
+    }
 }
 
 class OpenAIService {
@@ -35,6 +40,10 @@ class OpenAIService {
     private let logger = LogManager.shared
 
     func correctText(_ text: String) async throws -> String {
+        return try await processText(text, serviceType: .correction)
+    }
+
+    func processText(_ text: String, serviceType: ServiceType) async throws -> String {
         guard config.isConfigured else {
             throw OpenAIError.notConfigured
         }
@@ -54,7 +63,7 @@ class OpenAIService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // Combine system prompt with user text for better results
-        let fullPrompt = config.getSystemPrompt() + "\n\n" + text
+        let fullPrompt = config.getSystemPrompt(for: serviceType) + "\n\n" + text
 
         let requestBody: [String: Any] = [
             "model": config.model,
@@ -69,6 +78,7 @@ class OpenAIService {
 
         logger.info("Sending request to API: \(config.baseURL)")
         logger.info("Model: \(config.model)")
+        logger.info("Service type: \(serviceType)")
 
         let (data, response) = try await URLSession.shared.data(for: request)
 
@@ -111,9 +121,9 @@ class OpenAIService {
                 throw OpenAIError.decodingFailed
             }
 
-            let correctionResponse = try JSONDecoder().decode(CorrectionResponse.self, from: jsonData)
-            logger.info("Successfully decoded corrected text")
-            return correctionResponse.corrected_text
+            let serviceResponse = try JSONDecoder().decode(ServiceResponse.self, from: jsonData)
+            logger.info("Successfully decoded service response")
+            return serviceResponse.value
 
         case 401:
             logger.error("Unauthorized - check API key")
