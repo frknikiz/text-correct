@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>frkn.text-correct</string>
+	<key>CFBundleName</key>
+	<string>Text Correct</string>
+	<key>CFBundleDisplayName</key>
+	<string>Text Correct</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMessage</key>
+			<string>serviceCorrectText</string>
+			<key>NSPortName</key>
+			<string>text-correct</string>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>✏️ Metni Düzelt</string>
+			</dict>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSReturnTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

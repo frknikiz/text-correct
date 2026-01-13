@@ -1,0 +1,258 @@
+{"timestamp":1768241605363,"sessionId":"debug-session","location":"LogManager.swift","instanceAddr":"0x0000600001dfc060","runId":"initial","hypothesisId":"B","message":"LogManager init called"}
+{"sessionId":"debug-session","message":"showSettings called","hypothesisId":"A","location":"AppDelegate.swift","timestamp":1768241608355,"runId":"initial"}
+{"hypothesisId":"A","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x122e0a990>), userInfo = nil","runId":"initial","message":"windowWillClose called","sessionId":"debug-session","timestamp":1768241610846,"location":"AppDelegate.swift"}
+{"hypothesisId":"A","windowAddr":"0x0000000122e0a990","runId":"initial","message":"Window object obtained","sessionId":"debug-session","timestamp":1768241610851,"location":"AppDelegate.swift"}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"A","location":"AppDelegate.swift","message":"Settings window reference nil'd","timestamp":1768241610851}
+{"hypothesisId":"C","runId":"initial","message":"Scheduling async menu restore","sessionId":"debug-session","timestamp":1768241610851,"delay":"0.1s","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"C","location":"AppDelegate.swift","message":"Async closure executed","timestamp":1768241610956}
+{"runId":"initial","timestamp":1768241610957,"hypothesisId":"B","message":"self is valid, calling setupMenu","location":"AppDelegate.swift","sessionId":"debug-session","selfAddr":"0x0000600001dfc000"}
+{"runId":"initial","timestamp":1768241610958,"hypothesisId":"B","message":"About to access logger","location":"AppDelegate.swift","loggerAddr":"0x0000600001dfc060","sessionId":"debug-session"}
+{"location":"AppDelegate.swift","runId":"initial","timestamp":1768241610958,"hypothesisId":"B","message":"Logger call completed successfully","sessionId":"debug-session"}
+{"runId":"initial","location":"AppDelegate.swift","hypothesisId":"A","message":"windowWillClose called","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x114408740>), userInfo = nil","timestamp":1768241616178,"sessionId":"debug-session"}
+{"timestamp":1768241616183,"sessionId":"debug-session","windowAddr":"0x0000000114408740","message":"Window object obtained","runId":"initial","location":"AppDelegate.swift","hypothesisId":"A"}
+{"location":"AppDelegate.swift","timestamp":1768241616184,"message":"Debug window reference nil'd","runId":"initial","sessionId":"debug-session","hypothesisId":"A"}
+{"timestamp":1768241616184,"sessionId":"debug-session","message":"Scheduling async menu restore","runId":"initial","delay":"0.1s","location":"AppDelegate.swift","hypothesisId":"C"}
+{"hypothesisId":"B","location":"LogManager.swift","instanceAddr":"0x0000600003ddc060","message":"LogManager init called","runId":"initial","sessionId":"debug-session","timestamp":1768241990410}
+{"message":"AppDelegate init","location":"AppDelegate.swift","hypothesisId":"H","sessionId":"debug-session","runId":"initial","addr":"0x0000600003ddc000","timestamp":1768241990415}
+{"runId":"initial","hypothesisId":"H","message":"applicationDidFinishLaunching called","timestamp":1768241990639,"location":"AppDelegate.swift","sessionId":"debug-session"}
+{"sessionId":"debug-session","timestamp":1768241990732,"hypothesisId":"H","message":"Application setup complete","location":"AppDelegate.swift","runId":"initial"}
+{"message":"showSettings called","hypothesisId":"A","location":"AppDelegate.swift","timestamp":1768241997358,"sessionId":"debug-session","runId":"initial"}
+{"location":"AppDelegate.swift","message":"windowWillClose called","runId":"initial","sessionId":"debug-session","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x1446189e0>), userInfo = nil","timestamp":1768242004313,"hypothesisId":"A"}
+{"location":"AppDelegate.swift","message":"Window object obtained","windowAddr":"0x00000001446189e0","runId":"initial","title":"Text Correct - Ayarlar","sessionId":"debug-session","timestamp":1768242004319,"hypothesisId":"A"}
+{"message":"Identified as settingsWindow, about to nil it","runId":"initial","timestamp":1768242004320,"hypothesisId":"A","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"location":"AppDelegate.swift","hypothesisId":"A","sessionId":"debug-session","runId":"initial","message":"Settings window reference nil'd","timestamp":1768242004320}
+{"runId":"initial","timestamp":1768242004321,"sessionId":"debug-session","delay":"0.1s","message":"Scheduling async menu restore","location":"AppDelegate.swift","hypothesisId":"C"}
+{"message":"Async closure executed","location":"AppDelegate.swift","timestamp":1768242004422,"runId":"initial","hypothesisId":"C","sessionId":"debug-session"}
+{"runId":"initial","timestamp":1768242004423,"sessionId":"debug-session","message":"self is valid, calling setupMenu","selfAddr":"0x0000600003ddc000","hypothesisId":"B","location":"AppDelegate.swift"}
+{"timestamp":1768242004423,"hypothesisId":"B","sessionId":"debug-session","location":"AppDelegate.swift","runId":"initial","message":"About to access logger","loggerAddr":"0x0000600003ddc060"}
+{"hypothesisId":"B","location":"AppDelegate.swift","timestamp":1768242004424,"message":"Logger call completed successfully","runId":"initial","sessionId":"debug-session"}
+{"runId":"initial","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768242005975,"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x144610b80>), userInfo = nil","hypothesisId":"A","message":"windowWillClose called"}
+{"runId":"initial","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768242005975,"title":"Text Correct - Debug","windowAddr":"0x0000000144610b80","hypothesisId":"A","message":"Window object obtained"}
+{"runId":"initial","hypothesisId":"A","sessionId":"debug-session","location":"AppDelegate.swift","message":"Identified as debugWindow, about to nil it","timestamp":1768242005976}
+{"runId":"initial","hypothesisId":"A","sessionId":"debug-session","location":"AppDelegate.swift","message":"Debug window reference nil'd","timestamp":1768242005976}
+{"timestamp":1768242005976,"location":"AppDelegate.swift","sessionId":"debug-session","delay":"0.1s","message":"Scheduling async menu restore","runId":"initial","hypothesisId":"C"}
+{"runId":"initial","hypothesisId":"B","message":"LogManager init called","sessionId":"debug-session","timestamp":1768242659400,"instanceAddr":"0x60000386c6c0","location":"LogManager.swift"}
+{"runId":"initial","message":"AppDelegate init","hypothesisId":"H","timestamp":1768242659405,"sessionId":"debug-session","location":"AppDelegate.swift","addr":"0x600003864000"}
+{"message":"applicationDidFinishLaunching called","timestamp":1768242659682,"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"H"}
+{"message":"Application setup complete","location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial","timestamp":1768242659832,"hypothesisId":"H"}
+{"sessionId":"debug-session","timestamp":1768242666328,"runId":"initial","message":"showSettings called","location":"AppDelegate.swift","hypothesisId":"A"}
+{"sessionId":"debug-session","location":"AppDelegate.swift","hypothesisId":"A","windowAddr":"0x10cf0c2f0","timestamp":1768242666471,"message":"Settings window created and assigned","runId":"initial"}
+{"runId":"initial","location":"AppDelegate.swift","hypothesisId":"A","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x10cf0c2f0>), userInfo = nil","timestamp":1768242668004,"message":"windowWillClose called","sessionId":"debug-session"}
+{"runId":"initial","location":"AppDelegate.swift","hypothesisId":"A","windowAddr":"0x10cf0c2f0","title":"Text Correct - Ayarlar","timestamp":1768242668005,"message":"Window object obtained","sessionId":"debug-session"}
+{"sessionId":"debug-session","message":"Identified as settingsWindow, about to nil it","location":"AppDelegate.swift","runId":"initial","hypothesisId":"A","timestamp":1768242668005}
+{"sessionId":"debug-session","message":"Settings window reference nil'd","location":"AppDelegate.swift","runId":"initial","hypothesisId":"A","timestamp":1768242668006}
+{"runId":"initial","location":"AppDelegate.swift","delay":"0.1s","hypothesisId":"C","timestamp":1768242668006,"message":"Scheduling async menu restore","sessionId":"debug-session"}
+{"timestamp":1768242820141,"message":"LogManager init called","instanceAddr":"0x60000086c0c0","runId":"initial","hypothesisId":"B","location":"LogManager.swift","sessionId":"debug-session"}
+{"runId":"initial","hypothesisId":"H","message":"AppDelegate init","timestamp":1768242820146,"location":"AppDelegate.swift","sessionId":"debug-session","addr":"0x60000086c060"}
+{"sessionId":"debug-session","runId":"initial","timestamp":1768242820365,"location":"AppDelegate.swift","message":"applicationDidFinishLaunching called","hypothesisId":"H"}
+{"location":"AppDelegate.swift","runId":"initial","timestamp":1768242820456,"message":"setupMenu called","sessionId":"debug-session","hypothesisId":"J"}
+{"hypothesisId":"J","message":"Checking statusBarItem state","sessionId":"debug-session","timestamp":1768242820456,"currentMenu":"nil","statusBarItem":"exists","runId":"initial","location":"AppDelegate.swift"}
+{"message":"Menu assigned to statusBarItem","sessionId":"debug-session","location":"AppDelegate.swift","hypothesisId":"J","timestamp":1768242820459,"runId":"initial"}
+{"message":"Application setup complete","sessionId":"debug-session","location":"AppDelegate.swift","hypothesisId":"H","timestamp":1768242820459,"runId":"initial"}
+{"sessionId":"debug-session","hypothesisId":"A","location":"AppDelegate.swift","message":"showSettings called","runId":"initial","timestamp":1768242824181}
+{"runId":"initial","timestamp":1768242824182,"hypothesisId":"J","sessionId":"debug-session","location":"AppDelegate.swift","message":"setupMenu called"}
+{"location":"AppDelegate.swift","timestamp":1768242824182,"sessionId":"debug-session","statusBarItem":"exists","hypothesisId":"J","runId":"initial","currentMenu":"exists","message":"Checking statusBarItem state"}
+{"location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","sessionId":"debug-session","runId":"initial","timestamp":1768242824183,"hypothesisId":"J"}
+{"message":"Settings window created and assigned","location":"AppDelegate.swift","sessionId":"debug-session","windowAddr":"0x14b02ca70","hypothesisId":"A","runId":"initial","timestamp":1768242824317}
+{"message":"windowWillClose called","hypothesisId":"A","sessionId":"debug-session","timestamp":1768242826169,"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x14b02ca70>), userInfo = nil","runId":"initial","location":"AppDelegate.swift"}
+{"message":"Window object obtained","hypothesisId":"A","sessionId":"debug-session","timestamp":1768242826170,"runId":"initial","title":"Text Correct - Ayarlar","windowAddr":"0x14b02ca70","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"A","message":"Identified as settingsWindow, about to nil it","location":"AppDelegate.swift","timestamp":1768242826170}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"A","message":"Settings window reference nil'd","location":"AppDelegate.swift","timestamp":1768242826170}
+{"message":"Scheduling async menu restore","hypothesisId":"C","sessionId":"debug-session","timestamp":1768242826171,"isRestoringMenu":"false","delay":"0.1s","runId":"initial","location":"AppDelegate.swift"}
+{"timestamp":1768242834002,"instanceAddr":"0x6000028dc060","location":"LogManager.swift","runId":"initial","sessionId":"debug-session","hypothesisId":"B","message":"LogManager init called"}
+{"timestamp":1768242834006,"location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"H","message":"AppDelegate init","addr":"0x6000028dc000","runId":"initial"}
+{"runId":"initial","hypothesisId":"H","timestamp":1768242834225,"message":"applicationDidFinishLaunching called","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","runId":"initial","timestamp":1768242834322,"message":"setupMenu called","hypothesisId":"J","location":"AppDelegate.swift"}
+{"location":"AppDelegate.swift","hypothesisId":"J","statusBarItem":"exists","runId":"initial","message":"Checking statusBarItem state","sessionId":"debug-session","currentMenu":"nil","timestamp":1768242834323}
+{"runId":"initial","hypothesisId":"J","location":"AppDelegate.swift","sessionId":"debug-session","message":"Menu assigned to statusBarItem","timestamp":1768242834326}
+{"runId":"initial","hypothesisId":"H","location":"AppDelegate.swift","sessionId":"debug-session","message":"Application setup complete","timestamp":1768242834326}
+{"runId":"initial","hypothesisId":"A","sessionId":"debug-session","message":"showSettings called","timestamp":1768242836313,"location":"AppDelegate.swift"}
+{"location":"AppDelegate.swift","message":"setupMenu called","timestamp":1768242836314,"hypothesisId":"J","sessionId":"debug-session","runId":"initial"}
+{"timestamp":1768242836314,"location":"AppDelegate.swift","hypothesisId":"J","sessionId":"debug-session","message":"Checking statusBarItem state","runId":"initial","statusBarItem":"exists","currentMenu":"exists"}
+{"location":"AppDelegate.swift","runId":"initial","timestamp":1768242836315,"message":"Menu assigned to statusBarItem","sessionId":"debug-session","hypothesisId":"J"}
+{"hypothesisId":"A","message":"Settings window created and assigned","windowAddr":"0x144321430","location":"AppDelegate.swift","timestamp":1768242836466,"sessionId":"debug-session","runId":"initial"}
+{"timestamp":1768242839209,"sessionId":"debug-session","hypothesisId":"A","runId":"initial","location":"AppDelegate.swift","message":"showSettings called"}
+{"hypothesisId":"J","message":"setupMenu called","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768242839209,"runId":"initial"}
+{"statusBarItem":"exists","timestamp":1768242839210,"currentMenu":"exists","runId":"initial","hypothesisId":"J","sessionId":"debug-session","location":"AppDelegate.swift","message":"Checking statusBarItem state"}
+{"sessionId":"debug-session","location":"AppDelegate.swift","runId":"initial","message":"Menu assigned to statusBarItem","hypothesisId":"J","timestamp":1768242839210}
+{"location":"AppDelegate.swift","message":"Settings window already visible, bringing to front","sessionId":"debug-session","hypothesisId":"A","timestamp":1768242839211,"window":"existing","runId":"initial"}
+{"timestamp":1768242841382,"sessionId":"debug-session","hypothesisId":"D","runId":"initial","message":"closeWindow called","location":"SettingsView.swift"}
+{"location":"SettingsView.swift","keyWindow":"0x144321430","timestamp":1768242841383,"message":"Checking NSApp.keyWindow","hypothesisId":"D","sessionId":"debug-session","runId":"initial"}
+{"sessionId":"debug-session","message":"Inside async closure","runId":"initial","hypothesisId":"D","timestamp":1768242841385,"location":"SettingsView.swift"}
+{"runId":"initial","timestamp":1768242841385,"sessionId":"debug-session","windowAddr":"0x144321430","message":"Got window to close","hypothesisId":"D","location":"SettingsView.swift"}
+{"sessionId":"debug-session","message":"orderOut called","runId":"initial","hypothesisId":"D","timestamp":1768242841388,"location":"SettingsView.swift"}
+{"runId":"initial","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x144321430>), userInfo = nil","timestamp":1768242841389,"sessionId":"debug-session","message":"windowWillClose called","hypothesisId":"A","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768242841389,"sessionId":"debug-session","windowAddr":"0x144321430","message":"Window object obtained","hypothesisId":"A","location":"AppDelegate.swift","title":"Text Correct - Ayarlar"}
+{"sessionId":"debug-session","message":"Identified as settingsWindow, about to nil it","runId":"initial","hypothesisId":"A","timestamp":1768242841389,"location":"AppDelegate.swift"}
+{"sessionId":"debug-session","message":"Settings window reference nil'd","runId":"initial","hypothesisId":"A","timestamp":1768242841389,"location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768242841389,"sessionId":"debug-session","message":"Scheduling async menu restore","hypothesisId":"C","delay":"0.1s","isRestoringMenu":"false","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","message":"close() called","runId":"initial","hypothesisId":"D","timestamp":1768242841390,"location":"SettingsView.swift"}
+{"timestamp":1768243044717,"instanceAddr":"0x6000004800c0","hypothesisId":"B","runId":"initial","message":"LogManager init called","location":"LogManager.swift","sessionId":"debug-session"}
+{"sessionId":"debug-session","runId":"initial","addr":"0x600000480060","location":"AppDelegate.swift","message":"AppDelegate init","hypothesisId":"H","timestamp":1768243044722}
+{"sessionId":"debug-session","runId":"initial","timestamp":1768243045002,"hypothesisId":"H","location":"AppDelegate.swift","message":"applicationDidFinishLaunching called"}
+{"hypothesisId":"J","sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","timestamp":1768243045108,"message":"setupMenu called"}
+{"hypothesisId":"J","sessionId":"debug-session","statusBarItem":"exists","timestamp":1768243045108,"message":"Checking statusBarItem state","runId":"initial","location":"AppDelegate.swift","currentMenu":"nil"}
+{"sessionId":"debug-session","hypothesisId":"J","location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","timestamp":1768243045115,"runId":"initial"}
+{"sessionId":"debug-session","hypothesisId":"H","location":"AppDelegate.swift","message":"Application setup complete","timestamp":1768243045115,"runId":"initial"}
+{"sessionId":"debug-session","message":"showSettings called","hypothesisId":"A","runId":"initial","location":"AppDelegate.swift","timestamp":1768243050828}
+{"sessionId":"debug-session","message":"setupMenu called","hypothesisId":"J","runId":"initial","location":"AppDelegate.swift","timestamp":1768243050829}
+{"hypothesisId":"J","message":"Checking statusBarItem state","runId":"initial","location":"AppDelegate.swift","sessionId":"debug-session","currentMenu":"exists","statusBarItem":"exists","timestamp":1768243050830}
+{"sessionId":"debug-session","message":"Menu assigned to statusBarItem","hypothesisId":"J","runId":"initial","location":"AppDelegate.swift","timestamp":1768243050830}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"A","windowAddr":"0x11bf18380","message":"Settings window created and assigned","location":"AppDelegate.swift","timestamp":1768243050972}
+{"message":"closeWindow called","runId":"initial","sessionId":"debug-session","location":"SettingsView.swift","timestamp":1768243058550,"hypothesisId":"D"}
+{"message":"Checking NSApp.keyWindow","runId":"initial","timestamp":1768243058550,"sessionId":"debug-session","hypothesisId":"D","keyWindow":"0x11bf18380","location":"SettingsView.swift"}
+{"timestamp":1768243058555,"sessionId":"debug-session","message":"Inside async closure","hypothesisId":"D","runId":"initial","location":"SettingsView.swift"}
+{"location":"SettingsView.swift","sessionId":"debug-session","windowAddr":"0x11bf18380","message":"Got window to close","timestamp":1768243058555,"runId":"initial","hypothesisId":"D"}
+{"timestamp":1768243058556,"sessionId":"debug-session","message":"About to call window.close()","hypothesisId":"D","runId":"initial","location":"SettingsView.swift"}
+{"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x11bf18380>), userInfo = nil","location":"AppDelegate.swift","sessionId":"debug-session","message":"windowWillClose called","timestamp":1768243058558,"runId":"initial","hypothesisId":"A"}
+{"location":"AppDelegate.swift","sessionId":"debug-session","windowAddr":"0x11bf18380","message":"Window object obtained","timestamp":1768243058558,"runId":"initial","title":"Text Correct - Ayarlar","hypothesisId":"A"}
+{"timestamp":1768243058559,"sessionId":"debug-session","message":"Identified as settingsWindow, about to nil it","hypothesisId":"A","runId":"initial","location":"AppDelegate.swift"}
+{"timestamp":1768243058559,"sessionId":"debug-session","message":"Settings window reference nil'd","hypothesisId":"A","runId":"initial","location":"AppDelegate.swift"}
+{"location":"AppDelegate.swift","sessionId":"debug-session","isRestoringMenu":"false","message":"Scheduling async menu restore","timestamp":1768243058559,"runId":"initial","delay":"0.1s","hypothesisId":"C"}
+{"timestamp":1768243058567,"runId":"initial","location":"SettingsView.swift","sessionId":"debug-session","hypothesisId":"D","message":"close() called"}
+{"instanceAddr":"0x600003c6c0c0","message":"LogManager init called","runId":"initial","timestamp":1768243420000,"sessionId":"debug-session","location":"LogManager.swift","hypothesisId":"B"}
+{"location":"AppDelegate.swift","sessionId":"debug-session","message":"AppDelegate init","addr":"0x600003c6c060","hypothesisId":"H","runId":"initial","timestamp":1768243420005}
+{"message":"applicationDidFinishLaunching called","sessionId":"debug-session","runId":"initial","hypothesisId":"H","location":"AppDelegate.swift","timestamp":1768243420225}
+{"timestamp":1768243420316,"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","message":"setupMenu called","hypothesisId":"J"}
+{"sessionId":"debug-session","timestamp":1768243420316,"currentMenu":"nil","statusBarItem":"exists","runId":"initial","location":"AppDelegate.swift","hypothesisId":"J","message":"Checking statusBarItem state"}
+{"hypothesisId":"J","runId":"initial","location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","sessionId":"debug-session","timestamp":1768243420319}
+{"hypothesisId":"H","runId":"initial","location":"AppDelegate.swift","message":"Application setup complete","sessionId":"debug-session","timestamp":1768243420319}
+{"runId":"initial","timestamp":1768243431829,"sessionId":"debug-session","message":"showSettings called","hypothesisId":"L","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768243431830,"sessionId":"debug-session","message":"Calling setupMenu","hypothesisId":"L","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768243431830,"sessionId":"debug-session","message":"setupMenu called","hypothesisId":"J","location":"AppDelegate.swift"}
+{"runId":"initial","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768243431831,"message":"Checking statusBarItem state","statusBarItem":"exists","hypothesisId":"J","currentMenu":"exists"}
+{"location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","timestamp":1768243431831,"hypothesisId":"J","sessionId":"debug-session","runId":"initial"}
+{"sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift","message":"Checking if settings window exists and is visible","runId":"initial","timestamp":1768243431832}
+{"sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift","message":"Creating new SettingsView","runId":"initial","timestamp":1768243431832}
+{"sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift","message":"SettingsView created","runId":"initial","timestamp":1768243431833}
+{"sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift","message":"Creating NSHostingController","runId":"initial","timestamp":1768243431833}
+{"hypothesisId":"L","runId":"initial","location":"AppDelegate.swift","message":"NSHostingController created","sessionId":"debug-session","timestamp":1768243431842}
+{"hypothesisId":"L","runId":"initial","location":"AppDelegate.swift","message":"Creating NSWindow","sessionId":"debug-session","timestamp":1768243431842}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"L","timestamp":1768243431852,"message":"NSWindow created","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","runId":"initial","hypothesisId":"L","timestamp":1768243431852,"message":"Setting window properties","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","message":"Window properties set, delegate assigned","runId":"initial","hypothesisId":"L","location":"AppDelegate.swift","timestamp":1768243431943}
+{"sessionId":"debug-session","message":"Making window key and ordering front","runId":"initial","hypothesisId":"L","location":"AppDelegate.swift","timestamp":1768243431943}
+{"runId":"initial","hypothesisId":"L","timestamp":1768243431966,"message":"Window made key and ordered front","location":"AppDelegate.swift","sessionId":"debug-session"}
+{"hypothesisId":"L","message":"Assigning to settingsWindow property","timestamp":1768243431966,"location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial"}
+{"message":"Settings window created and assigned","timestamp":1768243431966,"hypothesisId":"L","runId":"initial","windowAddr":"0x1569152d0","location":"AppDelegate.swift","sessionId":"debug-session"}
+{"sessionId":"debug-session","runId":"initial","location":"SettingsView.swift","message":"closeWindow called","timestamp":1768243433915,"hypothesisId":"M"}
+{"keyWindow":"0x1569152d0","runId":"initial","timestamp":1768243433916,"sessionId":"debug-session","location":"SettingsView.swift","message":"Checking NSApp.keyWindow","hypothesisId":"M"}
+{"runId":"initial","windowAddr":"0x1569152d0","sessionId":"debug-session","location":"SettingsView.swift","message":"Got window to close","timestamp":1768243433917,"hypothesisId":"M"}
+{"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x1569152d0>), userInfo = nil","runId":"initial","sessionId":"debug-session","location":"AppDelegate.swift","message":"windowWillClose called","timestamp":1768243433919,"hypothesisId":"A"}
+{"title":"Text Correct - Ayarlar","runId":"initial","windowAddr":"0x1569152d0","sessionId":"debug-session","location":"AppDelegate.swift","message":"Window object obtained","timestamp":1768243433920,"hypothesisId":"A"}
+{"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","message":"Identified as settingsWindow, about to nil it","timestamp":1768243433920,"hypothesisId":"A"}
+{"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","message":"Settings window reference nil'd","timestamp":1768243433921,"hypothesisId":"A"}
+{"delay":"0.1s","runId":"initial","isRestoringMenu":"false","sessionId":"debug-session","location":"AppDelegate.swift","message":"Scheduling async menu restore","timestamp":1768243433921,"hypothesisId":"C"}
+{"sessionId":"debug-session","runId":"initial","location":"SettingsView.swift","timestamp":1768243433926,"hypothesisId":"M","message":"close() called"}
+{"runId":"initial","hypothesisId":"B","sessionId":"debug-session","location":"LogManager.swift","instanceAddr":"0x600002cc8120","message":"LogManager init called","timestamp":1768246246566}
+{"timestamp":1768246246571,"sessionId":"debug-session","runId":"initial","message":"AppDelegate init","location":"AppDelegate.swift","addr":"0x600002cc80c0","hypothesisId":"H"}
+{"location":"AppDelegate.swift","message":"applicationDidFinishLaunching called","timestamp":1768246247053,"sessionId":"debug-session","runId":"initial","hypothesisId":"H"}
+{"sessionId":"debug-session","message":"setupMenu called","location":"AppDelegate.swift","timestamp":1768246247087,"runId":"initial","hypothesisId":"J"}
+{"sessionId":"debug-session","hypothesisId":"J","statusBarItem":"exists","timestamp":1768246247087,"currentMenu":"nil","location":"AppDelegate.swift","runId":"initial","message":"Checking statusBarItem state"}
+{"sessionId":"debug-session","timestamp":1768246247087,"hypothesisId":"J","location":"AppDelegate.swift","runId":"initial","message":"Menu assigned to statusBarItem"}
+{"sessionId":"debug-session","timestamp":1768246247087,"hypothesisId":"H","location":"AppDelegate.swift","runId":"initial","message":"Application setup complete"}
+{"runId":"initial","timestamp":1768246352666,"hypothesisId":"L","message":"showSettings called","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768246352667,"hypothesisId":"L","message":"Calling setupMenu","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768246352668,"hypothesisId":"J","message":"setupMenu called","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"statusBarItem":"exists","hypothesisId":"J","message":"Checking statusBarItem state","sessionId":"debug-session","currentMenu":"exists","timestamp":1768246352668,"runId":"initial","location":"AppDelegate.swift"}
+{"runId":"initial","timestamp":1768246352669,"hypothesisId":"J","message":"Menu assigned to statusBarItem","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"location":"AppDelegate.swift","hypothesisId":"L","runId":"initial","message":"Checking if settings window exists and is visible","sessionId":"debug-session","timestamp":1768246352670}
+{"location":"AppDelegate.swift","hypothesisId":"L","runId":"initial","message":"Creating new SettingsView","sessionId":"debug-session","timestamp":1768246352670}
+{"timestamp":1768246352671,"hypothesisId":"L","runId":"initial","message":"SettingsView created","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"timestamp":1768246352671,"hypothesisId":"L","runId":"initial","message":"Creating NSHostingController","sessionId":"debug-session","location":"AppDelegate.swift"}
+{"hypothesisId":"L","location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial","message":"NSHostingController created","timestamp":1768246352683}
+{"hypothesisId":"L","location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial","message":"Creating NSWindow","timestamp":1768246352684}
+{"location":"AppDelegate.swift","timestamp":1768246352695,"message":"NSWindow created","sessionId":"debug-session","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768246352695,"message":"Setting window properties","sessionId":"debug-session","runId":"initial","hypothesisId":"L"}
+{"hypothesisId":"L","timestamp":1768246352833,"sessionId":"debug-session","message":"Window properties set, delegate assigned","location":"AppDelegate.swift","runId":"initial"}
+{"hypothesisId":"L","timestamp":1768246352833,"sessionId":"debug-session","message":"Making window key and ordering front","location":"AppDelegate.swift","runId":"initial"}
+{"sessionId":"debug-session","location":"AppDelegate.swift","runId":"initial","message":"Window made key and ordered front","hypothesisId":"L","timestamp":1768246352857}
+{"sessionId":"debug-session","location":"AppDelegate.swift","runId":"initial","message":"Assigning to settingsWindow property","hypothesisId":"L","timestamp":1768246352858}
+{"timestamp":1768246352858,"message":"Settings window created and assigned","windowAddr":"0x128a2cc60","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"L","runId":"initial"}
+{"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x128a2cc60>), userInfo = nil","message":"windowWillClose called","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"A","runId":"initial","timestamp":1768246354939}
+{"timestamp":1768246354940,"message":"Window object obtained","title":"Text Correct - Ayarlar","windowAddr":"0x128a2cc60","hypothesisId":"A","location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial"}
+{"hypothesisId":"A","location":"AppDelegate.swift","message":"Identified as settingsWindow, about to nil it","runId":"initial","sessionId":"debug-session","timestamp":1768246354940}
+{"hypothesisId":"A","location":"AppDelegate.swift","message":"Settings window reference nil'd","runId":"initial","sessionId":"debug-session","timestamp":1768246354941}
+{"timestamp":1768246354941,"message":"Scheduling async menu restore","delay":"0.1s","hypothesisId":"N","isRestoringMenu":"false","location":"AppDelegate.swift","sessionId":"debug-session","runId":"initial"}
+{"hypothesisId":"B","sessionId":"debug-session","message":"LogManager init called","instanceAddr":"0x6000035980c0","location":"LogManager.swift","timestamp":1768246721943,"runId":"initial"}
+{"hypothesisId":"H","sessionId":"debug-session","message":"AppDelegate init","location":"AppDelegate.swift","addr":"0x600003598060","timestamp":1768246721949,"runId":"initial"}
+{"hypothesisId":"H","runId":"initial","location":"AppDelegate.swift","message":"applicationDidFinishLaunching called","timestamp":1768246722345,"sessionId":"debug-session"}
+{"hypothesisId":"J","sessionId":"debug-session","location":"AppDelegate.swift","message":"setupMenu called","runId":"initial","timestamp":1768246722366}
+{"sessionId":"debug-session","runId":"initial","currentMenu":"nil","statusBarItem":"exists","message":"Checking statusBarItem state","timestamp":1768246722366,"location":"AppDelegate.swift","hypothesisId":"J"}
+{"message":"Menu assigned to statusBarItem","sessionId":"debug-session","timestamp":1768246722366,"location":"AppDelegate.swift","runId":"initial","hypothesisId":"J"}
+{"message":"Application setup complete","sessionId":"debug-session","timestamp":1768246722366,"location":"AppDelegate.swift","runId":"initial","hypothesisId":"H"}
+{"timestamp":1768246734189,"hypothesisId":"B","runId":"initial","instanceAddr":"0x6000031a0120","location":"LogManager.swift","sessionId":"debug-session","message":"LogManager init called"}
+{"timestamp":1768246734193,"addr":"0x6000031a00c0","message":"AppDelegate init","hypothesisId":"H","location":"AppDelegate.swift","runId":"initial","sessionId":"debug-session"}
+{"message":"applicationDidFinishLaunching called","timestamp":1768246734407,"sessionId":"debug-session","hypothesisId":"H","runId":"initial","location":"AppDelegate.swift"}
+{"timestamp":1768246734500,"sessionId":"debug-session","hypothesisId":"J","runId":"initial","location":"AppDelegate.swift","message":"setupMenu called"}
+{"sessionId":"debug-session","hypothesisId":"J","statusBarItem":"exists","runId":"initial","location":"AppDelegate.swift","timestamp":1768246734500,"message":"Checking statusBarItem state","currentMenu":"nil"}
+{"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"J","message":"Menu assigned to statusBarItem","timestamp":1768246734503}
+{"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"H","message":"Application setup complete","timestamp":1768246734503}
+{"timestamp":1768246864139,"message":"LogManager init called","runId":"initial","instanceAddr":"0x600000654120","hypothesisId":"B","sessionId":"debug-session","location":"LogManager.swift"}
+{"addr":"0x6000006540c0","timestamp":1768246864144,"runId":"initial","message":"AppDelegate init","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"H"}
+{"message":"applicationDidFinishLaunching called","runId":"initial","hypothesisId":"H","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768246864355}
+{"message":"setupMenu called","location":"AppDelegate.swift","timestamp":1768246864445,"sessionId":"debug-session","runId":"initial","hypothesisId":"J"}
+{"timestamp":1768246864445,"runId":"initial","statusBarItem":"exists","sessionId":"debug-session","location":"AppDelegate.swift","message":"Checking statusBarItem state","hypothesisId":"J","currentMenu":"nil"}
+{"runId":"initial","hypothesisId":"J","location":"AppDelegate.swift","timestamp":1768246864447,"sessionId":"debug-session","message":"Menu assigned to statusBarItem"}
+{"runId":"initial","hypothesisId":"H","location":"AppDelegate.swift","timestamp":1768246864448,"sessionId":"debug-session","message":"Application setup complete"}
+{"location":"AppDelegate.swift","timestamp":1768246867583,"sessionId":"debug-session","message":"showSettings called","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768246867584,"sessionId":"debug-session","message":"Calling setupMenu","runId":"initial","hypothesisId":"L"}
+{"timestamp":1768246867584,"hypothesisId":"J","location":"AppDelegate.swift","sessionId":"debug-session","message":"setupMenu called","runId":"initial"}
+{"location":"AppDelegate.swift","hypothesisId":"J","statusBarItem":"exists","message":"Checking statusBarItem state","runId":"initial","sessionId":"debug-session","currentMenu":"exists","timestamp":1768246867585}
+{"location":"AppDelegate.swift","timestamp":1768246867585,"sessionId":"debug-session","message":"Menu assigned to statusBarItem","runId":"initial","hypothesisId":"J"}
+{"location":"AppDelegate.swift","timestamp":1768246867586,"sessionId":"debug-session","message":"Checking if settings window exists and is visible","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768246867586,"sessionId":"debug-session","message":"Creating new SettingsView","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768246867587,"sessionId":"debug-session","message":"SettingsView created","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768246867587,"sessionId":"debug-session","message":"Creating NSHostingController","runId":"initial","hypothesisId":"L"}
+{"sessionId":"debug-session","hypothesisId":"L","timestamp":1768246867604,"message":"NSHostingController created","runId":"initial","location":"AppDelegate.swift"}
+{"sessionId":"debug-session","hypothesisId":"L","timestamp":1768246867604,"message":"Creating NSWindow","runId":"initial","location":"AppDelegate.swift"}
+{"timestamp":1768246867615,"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"L","message":"NSWindow created"}
+{"timestamp":1768246867615,"sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"L","message":"Setting window properties"}
+{"message":"Window properties set, delegate assigned","timestamp":1768246867760,"runId":"initial","sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift"}
+{"message":"Making window key and ordering front","timestamp":1768246867761,"runId":"initial","sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift"}
+{"runId":"initial","hypothesisId":"L","sessionId":"debug-session","location":"AppDelegate.swift","message":"Window made key and ordered front","timestamp":1768246867790}
+{"message":"Assigning to settingsWindow property","runId":"initial","sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift","timestamp":1768246867791}
+{"windowAddr":"0x134123980","message":"Settings window created and assigned","runId":"initial","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"L","timestamp":1768246867791}
+{"timestamp":1768246869485,"sessionId":"debug-session","runId":"initial","hypothesisId":"A","notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x134123980>), userInfo = nil","location":"AppDelegate.swift","message":"windowWillClose called"}
+{"title":"Text Correct - Ayarlar","timestamp":1768246869486,"sessionId":"debug-session","runId":"initial","hypothesisId":"A","windowAddr":"0x134123980","location":"AppDelegate.swift","message":"Window object obtained"}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"Identified as settingsWindow, about to nil it","hypothesisId":"A","runId":"initial","timestamp":1768246869486}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"Settings window reference nil'd","hypothesisId":"A","runId":"initial","timestamp":1768246869487}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"Restoring menu synchronously","hypothesisId":"O","runId":"initial","timestamp":1768246869487}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"setupMenu called","hypothesisId":"J","runId":"initial","timestamp":1768246869488}
+{"currentMenu":"exists","statusBarItem":"exists","runId":"initial","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"J","timestamp":1768246869488,"message":"Checking statusBarItem state"}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","hypothesisId":"J","runId":"initial","timestamp":1768246869489}
+{"sessionId":"debug-session","location":"AppDelegate.swift","message":"Menu restored successfully","hypothesisId":"O","runId":"initial","timestamp":1768246869489}
+{"timestamp":1768247079929,"message":"LogManager init called","sessionId":"debug-session","hypothesisId":"B","location":"LogManager.swift","runId":"initial","instanceAddr":"0x600002cc0300"}
+{"addr":"0x600002cc02a0","hypothesisId":"H","message":"AppDelegate init","sessionId":"debug-session","timestamp":1768247079935,"runId":"initial","location":"AppDelegate.swift"}
+{"message":"applicationDidFinishLaunching called","timestamp":1768247080006,"runId":"initial","sessionId":"debug-session","location":"AppDelegate.swift","hypothesisId":"H"}
+{"location":"AppDelegate.swift","timestamp":1768247080039,"sessionId":"debug-session","message":"setupMenu called","runId":"initial","hypothesisId":"J"}
+{"message":"Checking statusBarItem state","sessionId":"debug-session","currentMenu":"nil","location":"AppDelegate.swift","timestamp":1768247080039,"statusBarItem":"exists","hypothesisId":"J","runId":"initial"}
+{"message":"Menu assigned to statusBarItem","sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"J","timestamp":1768247080041}
+{"message":"Application setup complete","sessionId":"debug-session","runId":"initial","location":"AppDelegate.swift","hypothesisId":"H","timestamp":1768247080041}
+{"message":"showSettings called","timestamp":1768247083957,"runId":"initial","sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift"}
+{"message":"Calling setupMenu","timestamp":1768247083957,"runId":"initial","sessionId":"debug-session","hypothesisId":"L","location":"AppDelegate.swift"}
+{"message":"setupMenu called","timestamp":1768247083957,"runId":"initial","sessionId":"debug-session","hypothesisId":"J","location":"AppDelegate.swift"}
+{"runId":"initial","hypothesisId":"J","statusBarItem":"exists","currentMenu":"exists","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083957,"message":"Checking statusBarItem state"}
+{"message":"Menu assigned to statusBarItem","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083958,"runId":"initial","hypothesisId":"J"}
+{"message":"Checking if settings window exists and is visible","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083958,"runId":"initial","hypothesisId":"L"}
+{"message":"Creating new SettingsView","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083958,"runId":"initial","hypothesisId":"L"}
+{"message":"SettingsView created","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083958,"runId":"initial","hypothesisId":"L"}
+{"message":"Creating NSHostingController","sessionId":"debug-session","location":"AppDelegate.swift","timestamp":1768247083958,"runId":"initial","hypothesisId":"L"}
+{"runId":"initial","message":"NSHostingController created","timestamp":1768247083960,"location":"AppDelegate.swift","hypothesisId":"L","sessionId":"debug-session"}
+{"runId":"initial","message":"Creating NSWindow","timestamp":1768247083960,"location":"AppDelegate.swift","hypothesisId":"L","sessionId":"debug-session"}
+{"location":"AppDelegate.swift","timestamp":1768247083967,"sessionId":"debug-session","message":"NSWindow created","runId":"initial","hypothesisId":"L"}
+{"location":"AppDelegate.swift","timestamp":1768247083967,"sessionId":"debug-session","message":"Setting window properties","runId":"initial","hypothesisId":"L"}
+{"timestamp":1768247084002,"sessionId":"debug-session","hypothesisId":"L","message":"Window properties set, delegate assigned","runId":"initial","location":"AppDelegate.swift"}
+{"timestamp":1768247084002,"sessionId":"debug-session","hypothesisId":"L","message":"Making window key and ordering front","runId":"initial","location":"AppDelegate.swift"}
+{"message":"Window made key and ordered front","sessionId":"debug-session","runId":"initial","hypothesisId":"L","location":"AppDelegate.swift","timestamp":1768247084021}
+{"message":"Assigning to settingsWindow property","sessionId":"debug-session","runId":"initial","hypothesisId":"L","location":"AppDelegate.swift","timestamp":1768247084021}
+{"location":"AppDelegate.swift","message":"Settings window created and assigned","sessionId":"debug-session","runId":"initial","timestamp":1768247084021,"windowAddr":"0x139f34070","hypothesisId":"L"}
+{"notification":"name = NSWindowWillCloseNotification, object = Optional(<NSWindow: 0x139f34070>), userInfo = nil","runId":"initial","timestamp":1768247086299,"hypothesisId":"A","location":"AppDelegate.swift","message":"windowWillClose called","sessionId":"debug-session"}
+{"timestamp":1768247086301,"runId":"initial","windowAddr":"0x139f34070","location":"AppDelegate.swift","sessionId":"debug-session","hypothesisId":"A","message":"Window object obtained","title":"Text Correct - Ayarlar"}
+{"hypothesisId":"A","location":"AppDelegate.swift","message":"Identified as settingsWindow, about to nil it","runId":"initial","timestamp":1768247086301,"sessionId":"debug-session"}
+{"hypothesisId":"A","location":"AppDelegate.swift","message":"Settings window reference nil'd","runId":"initial","timestamp":1768247086302,"sessionId":"debug-session"}
+{"hypothesisId":"O","location":"AppDelegate.swift","message":"Restoring menu synchronously","runId":"initial","timestamp":1768247086302,"sessionId":"debug-session"}
+{"hypothesisId":"J","location":"AppDelegate.swift","message":"setupMenu called","runId":"initial","timestamp":1768247086302,"sessionId":"debug-session"}
+{"runId":"initial","statusBarItem":"exists","currentMenu":"exists","timestamp":1768247086303,"hypothesisId":"J","location":"AppDelegate.swift","message":"Checking statusBarItem state","sessionId":"debug-session"}
+{"hypothesisId":"J","location":"AppDelegate.swift","message":"Menu assigned to statusBarItem","runId":"initial","timestamp":1768247086303,"sessionId":"debug-session"}
+{"hypothesisId":"O","location":"AppDelegate.swift","message":"Menu restored successfully","runId":"initial","timestamp":1768247086303,"sessionId":"debug-session"}
